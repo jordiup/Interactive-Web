@@ -6,18 +6,18 @@ import Drip from "./drip"
 
 require('./WatercolorCanvas.scss')
 const colors = [
-  ["#4D816A",  "#7BAB9B",  "#398974",  "#035546",  "#D1D5C6", "#F0ECAC", "#f5f7f9", "#e0e9ee"],
+  // ["#4D816A",  "#7BAB9B",  "#398974",  "#035546",  "#D1D5C6", "#F0ECAC", "#f5f7f9", "#e0e9ee"],
   // ['#F7F9FE', '#ECF1F2', '#DCE8EB', '#CBDBE0', '#BED2D9'],
   // ["#44749D","#C6D4E1","#FFFFFF","#EBE7E0","#BDB8AD"],
-  ["#539FA2","#72B1A4","#ABCCB1","#C4DBB4","#D4E2B6"],
+  // ["#539FA2","#72B1A4","#ABCCB1","#C4DBB4","#D4E2B6"],
   ["#C7443D", "#D9764D", "#CC9E8A", "#C1C5C7", "#EBDFC6",],
-  ["#F7F5CD", "#F0ECAC", "#DBD786", "#AAC981", "#B6DB86", "#FFFFFF"],
+  // ["#F7F5CD", "#F0ECAC", "#DBD786", "#AAC981", "#B6DB86", "#FFFFFF"],
   // ["#27191C", "#2D3839", "#114D4D", "#6E9987", "#E0E4CE",],
   // ["#1C120A", "#699124", "#90AD87", "#BDD1AE", "#E2E8D5"],
-  ["#FFF5DE", "#B8D9C8", "#917081", "#750E49", "#4D002B",],
-  ["#FBFAF2", "#87A227", "#637E13", "#2B400B", "#0F2405"],
+  // ["#FFF5DE", "#B8D9C8", "#917081", "#750E49", "#4D002B",],
+  // ["#FBFAF2", "#87A227", "#637E13", "#2B400B", "#0F2405"],
   // ["#7F6E4F", "#CEA060", "#5D5650", "#A28C2D", "#FAF9ED", "#3E2316"],
-  ["#D9DADC","#E7E8ED","#F4F4F6","#E3E4E8","#9CA4AA","#4B515F"],
+  // ["#D9DADC","#E7E8ED","#F4F4F6","#E3E4E8","#9CA4AA","#4B515F"],
   // ["#234F4A","#161D23","#3B3F4B","#112F2E","#84998D","#8E8280", "#f5f7f9", "#e0e9ee"],
   // ["#50426A","#A6A6A6","#7D99AB","#E2EBE8","#B3C8CD","#523A38"],
   // ["#007199","#002335","#004B65","#007EA4","#002D44","#00527A", "#F0ECAC", "#f5f7f9", "#e0e9ee"],
@@ -82,9 +82,11 @@ class WatercolorCanvas extends Component {
 
     scene.enable();
 
+
+    // Speed of splotching
     let interval = setInterval(() => {
       this.addDrip(scene);
-    }, 300)
+    }, 100)
   }
 
   selectColors = (idx) => {
@@ -112,7 +114,7 @@ class WatercolorCanvas extends Component {
       <div className={this.getClassName()}>
         <canvas id="watercolorCanvas" className="WatercolorCanvas__canvas" />
         <div className="WatercolorCanvas__colors">
-          {this.renderColorBlocks()}
+          {/* {this.renderColorBlocks()} */}
         </div>
       </div>
     )
